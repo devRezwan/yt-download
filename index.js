@@ -4,6 +4,8 @@ const ytdl = require("ytdl-core");
 const app = express();
 const PORT = 3000;
 
+app.use(express.static('public'));  
+
 app.get("/", (req, res) => {
   const baseUrl = `${req.protocol}://${req.get('host')}`;
 
