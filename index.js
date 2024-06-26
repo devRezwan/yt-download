@@ -5,10 +5,11 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
+  const baseUrl = `${req.protocol}://${req.get('host')}`;
 
   res.send({
     "message": "Test Url",
-    "url" : "http://localhost:3000/download?url=https://www.youtube.com/watch?v=MkyoQfn-0a0"
+    "url" : `${baseUrl}/download?url=https://www.youtube.com/watch?v=MkyoQfn-0a0`
   });
 });
 
