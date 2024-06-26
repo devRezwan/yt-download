@@ -6,7 +6,7 @@ const PORT = 3000;
 
 app.get("/", (req, res) => {
   res.status(200);
-  res.send("Hello");
+  res.send("Hello vercel");
 });
 
 // http://localhost:3000/download?url=https://www.youtube.com/watch?v=MkyoQfn-0a0
