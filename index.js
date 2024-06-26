@@ -5,8 +5,11 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-  res.status(200);
-  res.send("Hello vercel");
+
+  res.send({
+    "message": "Test Url",
+    "url" : "http://localhost:3000/download?url=https://www.youtube.com/watch?v=MkyoQfn-0a0"
+  });
 });
 
 // http://localhost:3000/download?url=https://www.youtube.com/watch?v=MkyoQfn-0a0
